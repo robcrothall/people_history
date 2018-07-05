@@ -162,7 +162,7 @@ CREATE TABLE `sql_log` (
 DROP TABLE IF EXISTS `logon_log`;
 CREATE TABLE `logon_log` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(255) NOT NULL,
+  `user_name` varchar(255) NULL,
   `password` varchar(50) DEFAULT NULL,
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,

@@ -1,4 +1,4 @@
-<img src="img/logo.gif" alt="" /><?php
+<?php
 
     // configuration
     require("../includes/config.php"); 
