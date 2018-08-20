@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Genealogy People</title>
+  </head>
+  <body>
+    <center>
+      <table id="people_container" width="95%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	  <td align="center" valign="top" width="95%">
+	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	      <tr>
+		<td align="center" bgcolor="#5d8eb6" valign="top">
+		  <h1><font color="white">Kowie Museum</font></h1>
+		</td>
+	      </tr>
+	    </table>
+	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	      <tr>
+		<td align="left" width="60%">Search client: Rob Crothall</td>
+		<td align="right" width="40%">2018-04-25 08h43</td>
+	      </tr>
+	      <tr>
+		<td align="left" width="60%">Search number</td>
+		<td align="right" width="40%">4/2018</td>
+	      </tr>
+	    </table>
+	    <h1>Results of your search</h1>
+	    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+	      <tr>
+		<th>Surname</th>
+		<th>First Name</th>
+		<th>Other Names</th>
+		<th>Title</th>
+		<th>Birth</th>
+		<th>Occupation</th>
+		<th>Party</th>
+		<th>Place</th>
+		<th>Ship</th>
+	      </tr>
+	      <tr>
+		<td><a href="1detail.html" target="_blank">Adams</a></td>
+		<td>Harriet</td>
+		<td></td>
+		<td>Mrs</td>
+		<td>1795</td>
+		<td>Wife</td>
+		<td>Wilson</td>
+		<td>London</td>
+		<td>Belle Alliance</td>
+	      </tr>
+	      <tr>
+		<td><a href="2detail.html" target="_blank">Adams</a></td>
+		<td>James</td>
+		<td></td>
+		<td>Mr</td>
+		<td>1790</td>
+		<td>Farmer</td>
+		<td>Wilson</td>
+		<td>London</td>
+		<td>Belle Alliance</td>
+	      </tr>
+	      <tr>
+		<td><a href="3detail.html" target="_blank">Adams</a></td>
+		<td>Jane</td>
+		<td>Gertrude</td>
+		<td>Mrs</td>
+		<td>1790</td>
+		<td>Wife</td>
+		<td>Shepherds</td>
+		<td>Wiltshire</td>
+		<td>Weymouth</td>
+	      </tr>
+	  </td>
+	</tr>
+      </table>
+    </center>
+  </body>
+</html>

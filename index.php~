@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <HEAD>
+    <META http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <META http-equiv="Pragma" content="no-cache"/>
+    <META http-equiv="Expires" content="0"/>
+  </HEAD>
+<body>
+<?php
+header("Location: http://localhost/testpeople/public/search.php", true, 301);
+exit;
+?>
+</body>
+</html>

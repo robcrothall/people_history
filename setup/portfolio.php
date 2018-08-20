@@ -1,5 +1,13 @@
 <?php
-
+        if (empty($_SESSION["id"]))
+        {
+		redirect("login.php");
+        }
+	else
+	{
+		redirect("search.php");
+	}
+		
     // configuration
     require("../includes/config.php"); 
 

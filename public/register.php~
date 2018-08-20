@@ -10,7 +10,7 @@
         {
             apologize("You must provide your Username.");
         }
-   /*     else if (empty($_POST["password"]))
+        else if (empty($_POST["password"]))
         {
             apologize("You must provide your password.");
         }
@@ -38,7 +38,7 @@
         {
             apologize("You must provide your email address.");
         }
-*/
+
         // query database for user
         $rows = query("SELECT * FROM users WHERE username = ?", $_POST["username"]);
 

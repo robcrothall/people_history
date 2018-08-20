@@ -5,6 +5,8 @@
 -- Host: localhost    Database: peoplehist
 -- ------------------------------------------------------
 USE peoplehist;
+create user `khm` identified by 'MorseJones';
+grant all on peoplehist to khm;
 --
 -- Structure for table 'people' - details about any person
 --
@@ -22,8 +24,8 @@ CREATE TABLE `people` (
   `voyage_id` int(10) NULL,
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY ('id')  
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT 'Details of people';
+  PRIMARY KEY (`id`)  
+) ENGINE=InnoDB;
 --
 -- Structure for table 'party' - a group of 1820 settlers
 --
@@ -35,8 +37,8 @@ CREATE TABLE `party` (
   `party_notes` text NULL,
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY ('id')  
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT 'Details of parties of settlers';
+  PRIMARY KEY (`id`)  
+) ENGINE=InnoDB;
 --
 -- Structure for table 'ship' - a ship bringing settlers
 --
@@ -47,8 +49,8 @@ CREATE TABLE `ship` (
   `ship_notes` text NULL,
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY ('id')  
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT 'Details of ships that brought settlers';
+  PRIMARY KEY (`id`)  
+) ENGINE=InnoDB;
 --
 -- Structure for table 'voyage' - a particular voyage of a ship bringing settlers
 --
@@ -62,8 +64,8 @@ CREATE TABLE `voyage` (
   `voyage_notes` text NULL,
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY ('id')  
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT 'Details of ships that brought settlers';
+  PRIMARY KEY (`id`)  
+) ENGINE=InnoDB;
 
 --
 -- Table structure for table `history`
@@ -80,7 +82,7 @@ CREATE TABLE `history` (
   `user_id` int(10) NOT NULL,
   `time_stamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB;
 --
 -- Table structure for table `place` - information about a physical location
 --
@@ -95,7 +97,7 @@ CREATE TABLE `place` (
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Detail of a Place mentioned';
+) ENGINE=InnoDB;
 --
 -- Table structure for table `occupation` - the profession of the person
 --
@@ -107,7 +109,7 @@ CREATE TABLE `occupation` (
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Detail of a Place mentioned';
+) ENGINE=InnoDB;
 --
 -- Table structure for table `users`
 --
@@ -122,13 +124,13 @@ CREATE TABLE `users` (
   `phone` varchar(20) null,
   `mobile` varchar(20) null,
   `email` varchar(255) null,
-  `member_exp` date() NOT NULL DEFAULT CURRENT_DATE,
+  `member_exp` date NOT NULL DEFAULT CURRENT_DATE,
   `user_role` varchar(20) NOT NULL DEFAULT 'VISITOR',
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_name` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB;
 --
 -- Table structure for table `synonyms`
 --
@@ -139,8 +141,8 @@ CREATE TABLE `synonyms` (
   `synonym` varchar(50) NOT NULL,
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  PRIMARY KEY (`word`)
+) ENGINE=InnoDB;
 --
 -- Table structure for table `sql_log`
 --
@@ -154,7 +156,7 @@ CREATE TABLE `sql_log` (
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB;
 --
 -- Table structure for table `logon_log`
 --
@@ -167,7 +169,7 @@ CREATE TABLE `logon_log` (
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB;
 --
 -- Table structure for table `search_log`
 --
@@ -185,5 +187,19 @@ CREATE TABLE `search_log` (
   `user_id` int(10) NOT NULL,
   `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB;
+--
+-- Table structure for table `search_log`
+--
+
+DROP TABLE IF EXISTS `payments`;
+CREATE TABLE `payments` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(50) NULL,
+  `amount` decimal(8,2) NULL,
+  `payment_date` date NULL,
+  `user_id` int(10) NOT NULL,
+  `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
 
