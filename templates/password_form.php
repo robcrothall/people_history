@@ -1,7 +1,4 @@
 <div class="container">
-<?php
-    require("../templates/menu.php");
-?>
 <p>
 To change your password, you need to enter your current password, then your new password twice.
 If your current password is correct, and the two entries of your new password match exactly, 

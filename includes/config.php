@@ -11,8 +11,8 @@
     error_reporting(E_ALL);
 
     // requirements
-    require("constants.php");
-    require("functions.php");
+    require("../includes/constants.php");
+    require("../includes/functions.php");
 
     // enable sessions
     session_start();
@@ -22,7 +22,7 @@
     {
         if (empty($_SESSION["id"]))
         {
-            redirect("login.php");
+            redirect("../public/login.php");
         }
     }
 

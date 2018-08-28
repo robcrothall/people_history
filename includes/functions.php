@@ -6,7 +6,7 @@
      * Helper functions.
      */
 
-    require_once("constants.php");
+    require_once("../includes/constants.php");
 
     /**
      * Apologizes to user with message.
@@ -24,7 +24,7 @@
     function dump($variable)
     {
         require("../templates/dump.php");
-        exit;
+        //exit;
     }
 
     /**
@@ -96,6 +96,41 @@
         ];
     }
 */
+	 /**
+	  * extract the actual SQL query submitted.
+	  */
+	 function showQuery($query, $params)
+    {
+        $keys = array();
+        $values = array();
+        
+        # build a regular expression for each parameter
+        foreach ($params as $key=>$value)
+        {
+            if (is_string($key))
+            {
+                $keys[] = '/:'.$key.'/';
+            }
+            else
+            {
+                $keys[] = '/[?]/';
+            }
+            
+            if(is_numeric($value))
+            {
+                $values[] = intval($value);
+            }
+            else
+            {
+                $values[] = '"'.$value .'"';
+            }
+        }
+        
+        $query = preg_replace($keys, $values, $query, 1, $count);
+        //logit($query, $_SESSION["module"]);
+        return false;
+    }
+
     /**
      * Executes SQL statement, possibly with parameters, returning
      * an array of all rows in result set or false on (non-fatal) error.
@@ -104,10 +139,9 @@
     {
         // SQL statement
         $sql = func_get_arg(0);
-    
+
         // parameters, if any
         $parameters = array_slice(func_get_args(), 1);
-
         // try to connect to database
         static $handle;
         if (!isset($handle))
@@ -127,7 +161,7 @@
                 exit;
             }
         }
-
+		  //logit($fullsql,$_SESSION["module"]);
         // prepare SQL statement
         $statement = $handle->prepare($sql);
         if ($statement === false)
@@ -224,6 +258,7 @@
     }
     function log_search($values = [])
     {
+    	  extract($values);
         $cmd1 = "insert into search_log (";
         $cmd2 = ") values (";
         $cmd3 = ")";
@@ -280,30 +315,40 @@
         $result = query("$cmd");
         return $result;
     }
-    function logon_log($values = [])
+    function logon_log($user_name_given, $password_given, $success)
     {
         $cmd1 = "insert into logon_log (";
         $cmd2 = ") values (";
         $cmd3 = ")";
-        if (!empty($values["user_name_given"]))
+        if (!empty($user_name_given))
         {        
             $cmd1 = $cmd1 . "user_name_given";
-            $cmd2 = $cmd2 . "'" . $values["user_name_given"] . "'";
+            $cmd2 = $cmd2 . "'" . $user_name_given . "'";
         }
         
-        if (!empty($values["password_given"]))
+        if (!empty($password_given))
         {
             $cmd1 = $cmd1 . ", password_given";
-            $cmd2 = $cmd2 . ", '" . $values["password_given"] . "'";
+            $cmd2 = $cmd2 . ", '" . $password_given . "'";
         }
         
-        if (!empty($values["success"]))
+        if (!empty($success))
         {        
             $cmd1 = $cmd1 . ", success";
-            $cmd2 = $cmd2 . ", " . $values["success"];
+            $cmd2 = $cmd2 . ", " . $success;
+        }
+        if (!empty($_SESSION["id"]))
+        {        
+            $cmd1 = $cmd1 . ", user_id";
+            $cmd2 = $cmd2 . ", " . $_SESSION["id"];
+            $cmd1 = $cmd1 . ", time_stamp";
+            $cmd2 = $cmd2 . ", now()";
         }
         
         $cmd = $cmd1 . $cmd2 . $cmd3;
+      //  $fullsql = showquery($sql, $parameters);
+		//  dump($fullsql);
+
         $result = query("$cmd");
         return $result;
     }
