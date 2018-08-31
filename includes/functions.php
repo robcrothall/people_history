@@ -164,16 +164,17 @@
 		  //logit($fullsql,$_SESSION["module"]);
         // prepare SQL statement
         $statement = $handle->prepare($sql);
+ //print_r($statement);
         if ($statement === false)
         {
             // trigger (big, orange) error
             trigger_error($handle->errorInfo()[2], E_USER_ERROR);
             exit;
         }
-
+ //print_r($parameters);
         // execute SQL statement
         $results = $statement->execute($parameters);
-
+ //print_r($results);
         // return result set's rows, if any
         if ($results !== false)
         {

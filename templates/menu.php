@@ -1,6 +1,6 @@
             <div class="topnav">
 					<?php
-					dump($_SESSION["id"]);
+					//dump($_SESSION["id"]);
 					if ($_SESSION["user_role"] == "STAFF" | $_SESSION["user_role"] == "ADMIN" ) {
                  echo "<a href=\"../public/history.php\" target=\"_blank\">History</a> ";
                  echo "<a href=\"../public/occupation.php\" target=\"_blank\">Occupation</a> ";

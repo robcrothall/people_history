@@ -39,7 +39,7 @@
 		  	$sql1 = $sql1 . ", other_name";
 		  	$sql2 = $sql2 . ", \"" . $other_name . "\"";
 		  }
-		  if ($_POST["title"] != "")
+		  if ($_POST["title"] == "")
 		  {
 		   $title = ucwords($_POST["title"]);
 		  	$sql1 = $sql1 . ", title";

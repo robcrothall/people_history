@@ -10,8 +10,8 @@
                  echo "<a href=\"../public/password.php\">Password</a> ";
 					  }
 					if ($_SESSION["user_role"] == "STAFF" | $_SESSION["user_role"] == "ADMIN" ) {
-                 echo "<a href=\"../public/people.php\" target=\"_blank\">People</a> ";
-                 echo "<a href=\"../public/place.php\" target=\"_blank\">Places</a> ";
+                 echo "<a href=\"../public/people.php\">People</a> ";
+                 echo "<a href=\"../public/place.php\">Places</a> ";
                  }
                echo "<a href=\"../public/register.php\">Register</a> ";
 					if($_SESSION["id"] !== "0") {

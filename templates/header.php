@@ -44,22 +44,20 @@
      	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
    	      <tr>
 	         	<td align="center" bgcolor="#5d8eb6" valign="top">
-		           <h1><font color="white">Kowie Museum</font></h1>
+		           <h1><font color="white">Kowie Museum<br>Eastern Cape People History</font></h1>
 		         </td>
 	         </tr>
 	       </table>
 	       <table border="0" cellpadding="0" cellspacing="0" width="100%">
 	         <tr>
-		        <td align="left" width="60%">Search client: <?php echo $_SESSION["first_name"] . " " . $_SESSION["surname"] ?> </td>
-		        <td align="right" width="40%">Timestamp: <?php echo date("Y-m-d H:i:s T"); ?></td>
+		        <td align="left" width="50%">Search client: <?php echo $_SESSION["first_name"] . " " . $_SESSION["surname"] ?> </td>
+		        <td align="right" width="50%">Timestamp: <?php echo date("Y-m-d H:i:s T"); ?></td>
 	         </tr>
 	         <tr>
-		        <td align="left" width="60%">Search number: <?php echo $_SESSION["search_count"] ?> </td>
-		        <td align="right" width="40%">Membership expires: <?php echo $_SESSION["member_exp"]; ?> </td>
+		        <td align="left" width="50%">Search number: <?php echo $_SESSION["search_count"] ?> </td>
+		        <td align="right" width="50%">Membership expiry: <?php echo $_SESSION["member_exp"]; ?> </td>
 	         </tr>
 	       </table>
-
-           <a href="/"><img alt="Kowie Museum People History" src="../public/img/logo.gif"/></a>
 		 <?php
     		require("../templates/menu.php");
 		 ?>
