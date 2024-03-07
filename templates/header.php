@@ -25,7 +25,7 @@
         <title>Kowie Museum</title>
     <?php endif ?>
 
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS  -->
     <!-- JQuery -->
 <!--    <script type="text/javascript" src="../public/js/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap tooltips -->
