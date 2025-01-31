@@ -1,16 +1,15 @@
   <body>
-    <center>
-      <table id="people_container" width="95%" border="0" cellpadding="0" cellspacing="0">
+    <table id="people_container" border="0">
 	<tr>
 	  <td align="center" valign="top" width="95%">
-	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	    <table border="0">
 	      <tr>
 		<td align="center" bgcolor="#5d8eb6" valign="top">
 		  <h1><font color="white">Kowie Museum</font></h1>
 		</td>
 	      </tr>
 	    </table>
-	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	    <table border="0">
 	      <tr>
 		<td align="left" width="60%">Search client: Rob Crothall</td>
 		<td align="right" width="40%">2018-04-25 08h43</td>
@@ -21,7 +20,7 @@
 	      </tr>
 	    </table>
 	    <h1>Results of your search</h1>
-	    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+	    <table>
 	      <tr>
 		<th>Surname</th>
 		<th>First Name</th>
@@ -47,5 +46,4 @@
 	  </td>
 	</tr>
       </table>
-    </center>
   </body>

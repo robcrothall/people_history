@@ -49,8 +49,8 @@
         }
         // insert the new user into the users table
         $rows = query("INSERT INTO users (username, hash, surname, first_name, phone, mobile, email) VALUES(?, ?, ?, ?, ?, ?, ?)", 
-            $_POST["username"], crypt($_POST["password"],$_POST["username"])), $_POST["surname"], $_POST["first_name"], 
-            $_POST["phone"], $_POST["mobile"], $_POST["email"];
+            $_POST["username"], crypt($_POST["password"], $_POST["username"]), $_POST["surname"], $_POST["first_name"], 
+            $_POST["phone"], $_POST["mobile"], $_POST["email"]);
         if ($rows === false)
         {
             apologize("Unable to register your user name - please contact support");

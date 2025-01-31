@@ -56,7 +56,7 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
+                            <textarea id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
                             <label for="message">Your message</label>
                         </div>
 

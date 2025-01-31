@@ -1,8 +1,9 @@
 <?php 
- <table id="places_container" width="95%" border="0" cellpadding="0" cellspacing="0">
+?>
+ <table id="places_container">
 	<tr>
-	  <td align="center" valign="top" width="95%">
-	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	  <td align="center">
+	    <table>
 	      <tr>
 				<td align="left" width="60%">Search client: Rob Crothall</td>
 				<td align="right" width="40%">2018-04-25 08h43</td>
@@ -12,8 +13,8 @@
 				<td align="right" width="40%">4/2018</td>
 	      </tr>
 	    </table>
-	  <h1>Details of a Place</h1>
-	    <table border="0" cellpadding="0" cellspacing="10" width="100%">
+<h1>Details of a Place</h1>
+	    <table>
 	      <tr>
 				<td align="right" width="30%">Name</td>
 				<td align="left" width="70%">England</td>
@@ -43,4 +44,3 @@
 	   </td>
 	</tr>
  </table>
-?>

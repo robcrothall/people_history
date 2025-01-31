@@ -1,4 +1,4 @@
-	    <table border="0" cellpadding="0" cellspacing="10" width="100%">
+	    <table>
 	      <tr>
 				<td align="right" width="30%">Surname</td>
 				<td width="2%"></td>
@@ -46,7 +46,7 @@
 	      </tr>
 	      <tr>
 				<td align="right" width="30%">Ship</td>
-				<td width="2%">&nbsp &nbsp</td>
+				<td width="2%">&nbsp; &nbsp;</td>
 				<td align="left" width="70%">
 		  			<select>
 		    			<option value="any">Any ship</option>
@@ -61,7 +61,7 @@
 	      </tr>
 	      <tr>
 				<td align="right" width="30%">Place</td>
-				<td width="2%">&nbsp</td>
+				<td width="2%">&nbsp;</td>
 				<td align="left" width="70%">
 		  			<select>
 		    			<option value="any">Any place</option>

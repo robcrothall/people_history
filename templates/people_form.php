@@ -1,6 +1,8 @@
 <form action="people.php" method="post">
-<h1>Capture details of People</h1>
-	    <table border="0" cellpadding="0" cellspacing="10" width="100%">
+	    <element>
+	    	<h1>Capture details of People</h1>
+	    </element>
+	    <table>
 	      <tr>
 				<td align="right" width="30%">Surname</td>
 				<td width="2%"></td>
@@ -36,7 +38,7 @@
 				<td width="2%"></td>
 				<td align="left" width="70%">
 		  			<select name="occ">
-		    			<option value="unknown">Unknown</option>-->
+		    			<option value="unknown">Unknown</option>
 		  				<?php
 		  					$rows = query("SELECT * FROM `occupation` order by occupation_name");
 		  					foreach ($rows as $row) {
@@ -52,7 +54,7 @@
 				<td width="2%"></td>
 				<td align="left" width="68%">
 		  			<select name="par">
-		    			<option value="unknown">Unknown or no party</option>-->
+		    			<option value="unknown">Unknown or no party</option>
 		  				<?php
 		  					$rows = query("SELECT * FROM `party` order by party_name");
 		  					foreach ($rows as $row) {
@@ -65,7 +67,7 @@
 	      </tr>
 	      <tr>
 				<td align="right" width="30%">Ship</td>
-				<td width="2%">&nbsp</td>
+				<td width="2%">&nbsp;</td>
 				<td align="left" width="70%">
 		  			<select name="voy">
 		    			<option value="unknown">Unknown or no ship</option>

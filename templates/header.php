@@ -41,14 +41,14 @@
   <body>
     <div class="container">
        <div id="top">
-     	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+     	    <table border="0">
    	      <tr>
 	         	<td align="center" bgcolor="#5d8eb6" valign="top">
 		           <h1><font color="white">Kowie Museum<br>Eastern Cape People History</font></h1>
 		         </td>
 	         </tr>
 	       </table>
-	       <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	       <table border="0">
 	         <tr>
 		        <td align="left" width="50%">Search client: <?php echo $_SESSION["first_name"] . " " . $_SESSION["surname"] ?> </td>
 		        <td align="right" width="50%">Timestamp: <?php echo date("Y-m-d H:i:s T"); ?></td>
